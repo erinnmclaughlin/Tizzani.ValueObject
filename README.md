@@ -48,3 +48,17 @@ public sealed class BlogContext : DbContext
 }
 ```
 
+## Json Serialization
+In some cases it might be useful to serialize/deserialize to/from the underlying value type. For these cases, you can include `ValueObjectConverter` in your json serialization options:
+
+```csharp
+var blog = new Blog(1, new BlogTitle("My Sick Blog"));
+
+// Without custom converter:
+var defaultJson = JsonSerializer.Serialze(blog);            // { "Id": 1, "Title": { "Value": "My Sick Blog" } }
+
+// With custom converter:
+var options = new JsonSerializerOptions();
+options.Converters.Add(new ValueObjectConverter());
+var customJson = JsonSerializer.Serialize(blog, options);   // { "Id": 1, "Title": "My Sick Blog" }
+```

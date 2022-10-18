@@ -5,6 +5,8 @@ A simple value object framework easily configurable for use with Entity Framewor
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/erinnmclaughlin/Tizzani.ValueObject/.NET)
 [![Nuget](https://img.shields.io/nuget/v/Tizzani.ValueObject)](https://www.nuget.org/packages/Tizzani.ValueObject/0.1.0)
 
+
+
 ## Sample Usage
 
 ##### BlogTitle.cs

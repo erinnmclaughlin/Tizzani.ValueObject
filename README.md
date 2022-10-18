@@ -1,4 +1,4 @@
-# Tizzani.ValueObject.EntityFrameworkCore
+# Tizzani.ValueObject
 
 A simple value object framework easily configurable for use with Entity Framework Core.
 

@@ -38,7 +38,7 @@ public sealed class Blog
 ```csharp
 public sealed class BlogContext : DbContext
 {
-    public DbSet<Blog>() => Set<Blog>();
+    public DbSet<Blog>() Blogs => Set<Blog>();
     
     protected override void OnModelCreating(ModelBuilder builder)
     {

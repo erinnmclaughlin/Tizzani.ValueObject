@@ -4,6 +4,7 @@ A simple value object framework easily configurable for use with entity framewor
 
 ## Sample Usage
 
+##### BlogTitle.cs
 ```csharp
 public sealed record BlogTitle : ValueObject<string>
 {
@@ -18,13 +19,19 @@ public sealed record BlogTitle : ValueObject<string>
             throw new ArgumentException("Blog title cannot exceed 50 characters.");
     }
 }
+```
 
+##### Blog.cs
+```csharp
 public sealed class Blog
 {
     public int Id { get; set; }
     public BlogTitle Title { get; set; } = null!;
 }
+```
 
+##### BlogContext.cs
+```csharp
 public sealed class BlogContext : DbContext
 {
     public DbSet<Blog>() => Set<Blog>();

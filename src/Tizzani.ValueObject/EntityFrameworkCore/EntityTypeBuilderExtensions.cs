@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.Linq.Expressions;
-using Tizzani.ValueObject.EntityFrameworkCore.Internal;
+using Tizzani.ValueObject.Internal;
 
 namespace Tizzani.ValueObject.EntityFrameworkCore;
 public static class EntityTypeBuilderExtensions

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Tizzani.ValueObject.EntityFrameworkCore.Internal;
+using Tizzani.ValueObject.Internal;
 
 namespace Tizzani.ValueObject.EntityFrameworkCore;
 

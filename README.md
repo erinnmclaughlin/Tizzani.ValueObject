@@ -8,7 +8,7 @@ A simple value object framework easily configurable for use with Entity Framewor
 
 ## Sample Usage
 
-##### BlogTitle.cs
+#### BlogTitle.cs
 ```csharp
 public sealed record BlogTitle : ValueObject<string>
 {
@@ -25,7 +25,7 @@ public sealed record BlogTitle : ValueObject<string>
 }
 ```
 
-##### Blog.cs
+#### Blog.cs
 ```csharp
 public sealed class Blog
 {
@@ -34,7 +34,7 @@ public sealed class Blog
 }
 ```
 
-##### BlogContext.cs
+#### BlogContext.cs
 ```csharp
 public sealed class BlogContext : DbContext
 {
@@ -53,14 +53,21 @@ public sealed class BlogContext : DbContext
 ## Json Serialization
 In some cases it might be useful to serialize/deserialize to/from the underlying value type. For these cases, you can include `ValueObjectConverter` in your json serialization options:
 
+#### Without custom converter:
 ```csharp
 var blog = new Blog(1, new BlogTitle("My Sick Blog"));
 
-// Without custom converter:
-var defaultJson = JsonSerializer.Serialze(blog);            // { "Id": 1, "Title": { "Value": "My Sick Blog" } }
+// output: {"Id":1,"Title":{"Value":"My Sick Blog"}}
+Console.WriteLine(JsonSerializer.Serialze(blog));
+```
 
-// With custom converter:
+#### With custom converter:
+```csharp
+var blog = new Blog(1, new BlogTitle("My Sick Blog"));
+
 var options = new JsonSerializerOptions();
 options.Converters.Add(new ValueObjectConverter());
-var customJson = JsonSerializer.Serialize(blog, options);   // { "Id": 1, "Title": "My Sick Blog" }
+
+// output: {"Id":1,"Title":"My Sick Blog"}
+Console.WriteLine(JsonSerializer.Serialize(blog, options));
 ```

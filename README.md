@@ -1,6 +1,8 @@
 # Tizzani.ValueObject.EntityFrameworkCore
 
-A simple value object framework easily configurable for use with entity framework.
+A simple value object framework easily configurable for use with Entity Framework Core.
+
+[![Nuget](https://img.shields.io/nuget/v/Tizzani.ValueObject.EntityFrameworkCore)](https://www.nuget.org/packages/Tizzani.ValueObject.EntityFrameworkCore/0.1.0)
 
 ## Sample Usage
 

@@ -1,6 +1,6 @@
-﻿namespace Tizzani.ValueObject.Internal;
+﻿namespace Tizzani.ValueObject.Extensions;
 
-internal static class TypeExtensions
+public static class TypeExtensions
 {
     public static bool IsValueObject(this Type t)
     {

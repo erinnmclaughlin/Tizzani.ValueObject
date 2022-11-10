@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/erinnmclaughlin/Tizzani.ValueObject</PackageProjectUrl>
-    <Version>0.2</Version>
+    <Version>0.3</Version>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <Authors>erinnmclaughlin</Authors>
     <Description>A simple value object framework</Description>
